@@ -1631,17 +1631,17 @@ Transform:
   - {fileID: 574467883}
   - {fileID: 1661193709}
   - {fileID: 782857790}
-  - {fileID: 88925585}
-  - {fileID: 432468890}
   - {fileID: 969503782}
-  - {fileID: 1424307627}
-  - {fileID: 508208102}
   - {fileID: 978664989}
   - {fileID: 1651676389}
+  - {fileID: 88925585}
+  - {fileID: 432468890}
   - {fileID: 2119385689}
   - {fileID: 390974955}
+  - {fileID: 1424307627}
   - {fileID: 819649158}
   - {fileID: 1543740721}
+  - {fileID: 508208102}
   - {fileID: 1943505834}
   - {fileID: 448806020}
   - {fileID: 974794293}
@@ -4794,6 +4794,25 @@ Transform:
   m_Father: {fileID: 719732499}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 285.314, z: 0}
+--- !u!1 &1708626711 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7552da2fd46a98f4083d0bac8264a779,
+    type: 3}
+  m_PrefabInstance: {fileID: 1405369275}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1708626712
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1708626711}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 6.2689605, y: 0.1989253, z: 32.597527}
+  m_Center: {x: -1.0146, y: -0.35253674, z: 4.457417}
 --- !u!1 &1760254391 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5918467704134332223, guid: b8871ddf395debd4eaf3bbaaca75b221,
