@@ -58,12 +58,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ae38c67a-afdf-474d-866b-e76eaff66492" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Growler_Repair_Sim/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Growler_Repair_Sim/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Growler_Repair_Sim/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Growler_Repair_Sim/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Oculus Hands/Models/l_hand_skeletal_lowres.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Oculus Hands/Models/l_hand_skeletal_lowres.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Oculus Hands/Prefabs/Left Hand Model.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Oculus Hands/Prefabs/Left Hand Model.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Oculus Hands/Prefabs/Right Hand Model.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Oculus Hands/Prefabs/Right Hand Model.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/GreyBox.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GreyBox.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripting/HandBehavior.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripting/HandBehavior.cs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -142,6 +138,7 @@
       <workItem from="1603485442345" duration="3311000" />
       <workItem from="1604601442852" duration="164000" />
       <workItem from="1605679717566" duration="2172000" />
+      <workItem from="1605710659169" duration="246000" />
     </task>
     <servers />
   </component>
