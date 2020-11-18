@@ -83,7 +83,6 @@
 =======
 >>>>>>> parent of 8860d9a... hand behavior edits
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/GreyBox.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GreyBox.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripting/HandBehavior.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripting/HandBehavior.cs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
