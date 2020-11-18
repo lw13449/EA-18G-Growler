@@ -41,8 +41,10 @@
           </e>
         </e>
         <e p="Scripting" t="Include">
+          <e p="AudioManager.cs" t="Include" />
           <e p="ContinuousMovement.cs" t="Include" />
           <e p="HandBehavior.cs" t="Include" />
+          <e p="Sounds.cs" t="Include" />
         </e>
       </e>
       <e p="Growler_Repair_Sim.sln" t="IncludeFlat" />
