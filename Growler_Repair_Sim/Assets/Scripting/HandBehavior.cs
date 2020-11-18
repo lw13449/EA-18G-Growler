@@ -11,7 +11,7 @@ public class HandBehavior : MonoBehaviour
     public Animator handAnimator;
 
     private InputDevice targetDevice;
-    // Start is called before the first frame update
+    
     void Start()
     {
         //List<InputDevice> devices = new List<InputDevice>();
@@ -51,7 +51,7 @@ public class HandBehavior : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
         UpdateHandAnimation();
