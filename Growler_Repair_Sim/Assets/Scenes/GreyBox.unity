@@ -3213,6 +3213,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 109434732395451517, guid: 65847589f926b734d9eaed6e25f0046b,
         type: 3}
+    - target: {fileID: 1712315057829706716, guid: b8871ddf395debd4eaf3bbaaca75b221,
+        type: 3}
+      propertyPath: m_AnimateModel
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2294459157990110236, guid: b8871ddf395debd4eaf3bbaaca75b221,
         type: 3}
       propertyPath: near clip plane
@@ -3222,6 +3227,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Radius
       value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3603777592959891661, guid: b8871ddf395debd4eaf3bbaaca75b221,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5918467704134332223, guid: b8871ddf395debd4eaf3bbaaca75b221,
         type: 3}
