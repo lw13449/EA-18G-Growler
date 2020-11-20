@@ -2,7 +2,7 @@
 using UnityEngine;
 using UnityEngine.XR;
 
-public class HandBehavior : MonoBehaviour
+public class HandPresence : MonoBehaviour
 {
     public bool showController;
     public List<GameObject> controllerPrefabs;
