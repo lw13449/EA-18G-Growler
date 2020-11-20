@@ -1,24 +1,26 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEditor;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR;
-using static UnityEngine.XR.CommonUsages;
 
 public class HandBehavior : MonoBehaviour
 {
+    public bool showController;
+    public List<GameObject> controllerPrefabs;
+    public InputDeviceCharacteristics controllerCharacteristics;
     public GameObject handModelPrefab;
-    public Animator handAnimator;
-
+    
     private InputDevice targetDevice;
-    // Start is called before the first frame update
-    void Start()
-    {
-        //List<InputDevice> devices = new List<InputDevice>();
-        //InputDeviceCharacteristics rightControllerCharacteristics = InputDeviceCharacteristics.Right;
-        //InputDevices.GetDevicesWithCharacteristics(rightControllerCharacteristics, devices);
+    private GameObject spawnedController;
+    private GameObject spawnedHandModel;
+    private Animator handAnimator;
+    
 
-        /*foreach (var item in devices)
+    private void Start()
+    {
+        List<InputDevice> devices = new List<InputDevice>();
+        
+        InputDevices.GetDevicesWithCharacteristics(controllerCharacteristics, devices);
+        foreach (var item in devices)
         {
             Debug.Log(item.name + item.characteristics);
         }
@@ -26,13 +28,25 @@ public class HandBehavior : MonoBehaviour
         if (devices.Count > 0)
         {
             targetDevice = devices[0];
-        }*/
-        handAnimator = handModelPrefab.GetComponent<Animator>();
+            GameObject prefab = controllerPrefabs.Find(controller => controller.name == targetDevice.name);
+            if (prefab)
+                spawnedController = Instantiate(prefab, transform);
+            else
+            {
+                Debug.LogError("Did not find the controller type...");
+                spawnedController = Instantiate(controllerPrefabs[0], transform);
+            }
+
+            spawnedHandModel = Instantiate(handModelPrefab, transform);
+            handAnimator = spawnedHandModel.GetComponent<Animator>();
+        }
     }
 
-    public void UpdateHandAnimation()
+
+
+    private void HandAnimation()
     {
-        if (targetDevice.TryGetFeatureValue(trigger, out float triggerValue))
+        if (targetDevice.TryGetFeatureValue(CommonUsages.trigger, out float triggerValue))
         {
             handAnimator.SetFloat("Trigger", triggerValue);
         }
@@ -40,8 +54,8 @@ public class HandBehavior : MonoBehaviour
         {
             handAnimator.SetFloat("Trigger", 0);
         }
-        
-        if (targetDevice.TryGetFeatureValue(grip, out float gripValue))
+
+        if (targetDevice.TryGetFeatureValue(CommonUsages.grip, out float gripValue))
         {
             handAnimator.SetFloat("Grip", gripValue);
         }
@@ -51,9 +65,18 @@ public class HandBehavior : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        UpdateHandAnimation();
+        if (showController)
+        {
+            spawnedHandModel.SetActive(false);
+            spawnedController.SetActive(true);
+        }
+        else
+        {
+            spawnedHandModel.SetActive(true);
+            spawnedController.SetActive(false);
+            HandAnimation();
+        }
     }
 }
