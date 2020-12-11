@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class UI_ScreenTransition : MonoBehaviour
 {
 
-    public GameObject canvasToTurnOn;
+    public GameObject[] canvasToTurnOn;
     //public GameObject canvasToTurnOff;
     public GameObject[] multiCanvasTurnOff;
     
@@ -16,8 +16,11 @@ public class UI_ScreenTransition : MonoBehaviour
  /// </summary>
     public void EnableUI()
     {
-        canvasToTurnOn.SetActive(true);
-        //canvasToTurnOff.SetActive(false);
+        foreach (var item in canvasToTurnOn)
+        {
+            item.SetActive(true);
+        }
+
         foreach (var item in multiCanvasTurnOff)
         {
             item.SetActive(false);
