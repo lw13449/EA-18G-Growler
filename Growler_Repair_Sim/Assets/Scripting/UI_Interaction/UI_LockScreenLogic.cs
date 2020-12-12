@@ -20,17 +20,19 @@ public class UI_LockScreenLogic : MonoBehaviour
     public string passcode;
     [HideInInspector]
     public UI_ScreenTransition UI_ScreenTransition_Script;
-   
+    public Button cancleButton;
+    public Button deleteButton;
+    public int[] enteredPasscode = new int[6];
+    public int i = 0;
 
-    private int i = 0;
     private string usersCode;
-    private int[] enteredPasscode = new int[6];
+    
 
     private void Start()
     {
         //Ensure i is set to 0 at the start of the program
         i = 0;
-        
+       
     }
 
     /// <summary>
@@ -63,6 +65,8 @@ public class UI_LockScreenLogic : MonoBehaviour
             {
                 enteredPasscode[j] = 0;
             }
+            deleteButton.gameObject.SetActive(false);
+            cancleButton.gameObject.SetActive(true);            
             i = 0;
             usersCode = null;
             StartCoroutine("IncorrectPasscodeTimer");
@@ -79,6 +83,8 @@ public class UI_LockScreenLogic : MonoBehaviour
         
         enteredPasscode.SetValue(digit, i);
         filled_Passcode_Icons[i].SetActive(true);
+        cancleButton.gameObject.SetActive(false);
+        deleteButton.gameObject.SetActive(true);
         i++;
 
         if (i == 6)
@@ -107,8 +113,4 @@ public class UI_LockScreenLogic : MonoBehaviour
         yield return new WaitForSeconds(2f);
         incorrect_Passcode_Bkg.SetActive(false);
     }
-
-
-
-
 }
